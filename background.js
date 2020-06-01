@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-browser.browserAction.onClicked.addListener(async () => {
+async function sendPing() {
   const currentDate = new Date();
 
   const payload = {
@@ -13,5 +12,14 @@ browser.browserAction.onClicked.addListener(async () => {
 
   // eslint-disable-next-line no-undef
   await browser.telemetry.submitEncryptedPing(payload, options);
-  console.info("Telemetry submitted, check about:telemetry");
-});
+}
+
+sendPing()
+  .then(result =>
+    console.info(
+      "Telemetry submitted, check about:telemetry archived ping data."
+    )
+  )
+  .catch(error => {
+    console.error("Could not send ping:", error);
+  });
