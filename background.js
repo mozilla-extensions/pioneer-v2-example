@@ -20,6 +20,16 @@ sendPing()
       "Telemetry submitted, check about:telemetry archived ping data."
     )
   )
-  .catch(error => {
-    console.error("Could not send ping:", error);
-  });
+  .catch(error => console.error("Could not send ping:", error));
+
+// eslint-disable-next-line no-undef
+browser.runtime.setUninstallURL("https://forms.gle/fLwAS3YUmPm3Qx959");
+
+// eslint-disable-next-line no-undef
+browser.management
+  .uninstallSelf()
+  .then(result =>
+    console
+      .info("Uninstalled Pioneer v2 demo study")
+      .catch(error => console.error("Could not uninstall self:", error))
+  );
