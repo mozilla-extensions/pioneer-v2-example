@@ -1,14 +1,14 @@
 {
   "name": "pioneer-v2-example",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An example Pioneer v2 study.",
   "homepage_url": "https://github.com/mozilla-extensions/pioneer-v2-example",
   "dependencies": {
-    "web-ext": "4.2.0"
+    "web-ext": "^4.3.0"
   },
   "devDependencies": {
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.11.0",
     "eslint-plugin-fetch-options": "0.0.5",
     "eslint-plugin-html": "6.0.2",
     "eslint-plugin-mozilla": "2.4.0",

@@ -26,5 +26,5 @@ browser.tabs
   .create({
     url: "https://forms.gle/fLwAS3YUmPm3Qx959"
   })
-  .then(result => console.info("Uninstalled Pioneer v2 demo study"))
-  .catch(error => console.error("Could not uninstall self:", error));
+  .then(result => console.info("Pioneer v2 survey launched"))
+  .catch(error => console.error("Could not launch Pioneer v2 survey:", error));
